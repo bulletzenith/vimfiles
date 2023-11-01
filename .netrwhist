@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='C:/Users/inkworkero'
+let g:netrw_dirhist_3='C:/Users/inkworkero/vimfiles'
+let g:netrw_dirhist_2='C:/Users/inkworkero/vimfiles/plugged'
+let g:netrw_dirhist_1='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe'
+let g:netrw_dirhist_0='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe/third_party'
+let g:netrw_dirhist_9='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe/third_party/ycmd'
+let g:netrw_dirhist_8='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe/third_party/ycmd/third_party'
+let g:netrw_dirhist_7='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe/third_party/ycmd/third_party/jedi_deps'
+let g:netrw_dirhist_6='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe/third_party/ycmd/third_party/jedi_deps/jedi'
+let g:netrw_dirhist_5='C:/Users/inkworkero/vimfiles/plugged/YouCompleteMe/third_party/ycmd/third_party/jedi_deps/jedi/jedi'
