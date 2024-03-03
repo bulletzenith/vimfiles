@@ -1,31 +1,50 @@
-vim9script
-# hehe
+" SET SETTINGS
 
-filetype plugin on
-syntax on
+" vims builtin fuzzy file finding is pretty good, can replace any plugin
+set path+=**
 
+" adds the menu which shows completions availiable in command mode
+set wildmenu
 
-if !isdirectory("/home/arch/.vim/undodir")
-    call mkdir("/home/arch/.vim/undodir", "", 0755)
-endif
-
+" gets rid of ye olde vi style, its 2023 boy
 set nocompatible
-set omnifunc=syntaxcomplete#Complete
-set mouse=
-set foldmethod=indent
-set undodir=~/.vim/undodir/
-set undofile
-set tw=70
-set nowrap
 
-# sometimes i mess up on saving, and apparently :update is a new hip way of
-# saving files
-command! -bar -nargs=* -complete=file -range=% -bang W update
+" lets you use your mouse in gVim 9.0
+set mouse=a
 
-# lol
-inoremap <C-c> <esc>
+" fixes backspace in gVIm Windows x64. backspace in insert mode doesnt work
+" like expected, instead it just rings the bell and does nothing.
+set backspace=indent,eol,start
 
-nnoremap <C-u> <C-u>zz
-nnoremap <C-d> <C-d>zz
-nnoremap j gj
-nnoremap k gk
+" adds the line and column number for the statusline, although its useless
+" when you have a statusline plugin
+set ruler
+
+" set scrolloff to scroll while having 7 lines visible, very useful when
+" scrolling with j/k
+set scrolloff=7
+
+" replaces tabs with whitespace instead of actual tabs
+set expandtab
+
+" on pressing tab, insert 2 spaces
+set tabstop=2
+set softtabstop=2
+
+" 'when indenting with > use 2 spaces width' idk just found it on the
+" internet
+set shiftwidth=2
+
+" sets the line number on the side, very useful
+set number
+set relativenumber
+
+" search related
+set hlsearch
+set incsearch
+
+" automatically nohl after done searching
+autocmd CmdlineLeave /,\? if getcmdtype() =~ "[/\\?]" | nohlsearch | endif
+
+" add clipboard support
+set clipboard=xclip
